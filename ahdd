@@ -1,0 +1,44 @@
+
+ReLU
+
+
+import numpy as np
+
+def relu(x):
+    return np.maximum(0, x)
+
+# Test the function with a sample input
+x = np.array([-2, -1, 0, 1, 2])
+print(relu(x)) # Output: [0, 0, 0, 1, 2]
+
+
+
+function in tensorflow
+
+import tensorflow as tf
+
+# Test the function with a sample input
+x = tf.constant([-2, -1, 0, 1, 2], dtype=tf.float32)
+print(tf.nn.relu(x)) # Output: [0, 0, 0, 1, 2]
+
+
+leaky ReLU
+
+
+import numpy as np
+
+def leaky_relu(x, alpha=0.01):
+    return np.maximum(alpha*x, x)
+
+# Test the function with a sample input
+x = np.array([-2, -1, 0, 1, 2])
+print(leaky_relu(x))
+
+
+function tensorflow
+
+import tensorflow as tf
+
+# Test the function with a sample input
+x = tf.constant([-2, -1, 0, 1, 2], dtype=tf.float32)
+print(tf.nn.leaky_relu(x, alpha=0.01))
